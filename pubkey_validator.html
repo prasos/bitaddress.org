@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <title>Bitcoin public key validator</title>
+  <meta charset="utf-8">
+
+  <script type="text/javascript" src="src/cryptojs.js"></script>
+  <script type="text/javascript" src="src/cryptojs.sha256.js"></script>
+  <script type="text/javascript" src="src/cryptojs.ripemd160.js"></script>
+  <script type="text/javascript" src="src/biginteger.js"></script>
+  <script type="text/javascript" src="src/bitcoinjs-lib.js"></script>
+  <script type="text/javascript" src="src/bitcoinjs-lib.base58.js"></script>
+  <script type="text/javascript" src="src/bitcoinjs-lib.address.js"></script>
+  <script type="text/javascript" src="src/bitcoinjs-lib.util.js"></script>
+  <script type="text/javascript" src="src/pubkey_validator.js"></script>
+</head>
+<body>
+  <form>
+    <div>
+      <label for="pubkey">Public key:</label>
+      <input type="text" size="140" id="pubkey" value="0478982F40FA0C0B7A55717583AFC99A4EDFD301A2729DC59B0B8EB9E18692BCB521F054FAD982AF4CC1933AFD1F1B563EA779A6AA6CCE36A30B947DD653E63E44"/>
+    </div>
+    <div>
+      <label for="address">Bitcoin address:</label>
+      <input type="text" size="40" id="address" value="1Cnz9ULjzBPYhDw1J8bpczDWCEXnC9HuU1"/>
+    </div>
+    <button type="button" onclick="alert(validatePubKey(pubkey.value, address.value));">Validoi</button>
+  </form>
+</body>
+</html>
