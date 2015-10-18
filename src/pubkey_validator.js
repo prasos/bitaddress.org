@@ -4,3 +4,5 @@ function validatePubKey(pubKeyHex, userAddress) {
     var address = new Bitcoin.Address(pubKeyHash).toString();
     return address == userAddress;
 }
+
+window['validatePubKey'] = validatePubKey;
